@@ -147,7 +147,7 @@ app.get('/updateStudent', (req, res) => {
 })
 
 // update any student
-app.get('/updateStudent',(req,res)=>{
+app.post('/updateStudent',(req,res)=>{
     //res.render("update")
     var id = req.body.Roll_No;
     var marks = parseInt(req.body.Marks);
