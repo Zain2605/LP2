@@ -7,6 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="number" placeholder="Enter roll number">
+    <form action="/updateStudent" method="post">
+        <input type="number" placeholder="Enter roll number" name="Roll_No">
+        <input type = "number" placeholder="Enter Marks for increment" name="Marks">
+        <button onclick="handleUpdate()" type="submit">Submit</button>
+    </form>
 </body>
 </html>

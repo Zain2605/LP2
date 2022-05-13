@@ -142,11 +142,15 @@ app.post('/deleteStudent/:id',(req,res)=>{
     })
 });
 
+app.get('/updateStudent', (req, res) => {
+    res.render("update");
+})
+
 // update any student
 app.get('/updateStudent',(req,res)=>{
     //res.render("update")
-    var id = req.query['rollNo'];
-    var marks = parseInt(req.query['marks']);
+    var id = req.body.Roll_No;
+    var marks = parseInt(req.body.Marks);
     Student.findOneAndUpdate({"Roll_No":id},{$inc:{"WAD_Marks":marks, "DSBDA_Marks":marks,"CC_Marks":marks,"CNS_Marks":marks,"AI_Marks":marks}}).then(()=>{
         res.redirect('/students');
     }).catch((err)=>{
