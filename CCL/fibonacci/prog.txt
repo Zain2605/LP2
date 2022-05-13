@@ -1,0 +1,14 @@
+print ('Content-Type:text/plain')
+
+n1=0
+n2=1
+
+nterms=10
+
+count=0
+while count<nterms:
+    print(n1)
+    next_term=n1+n2
+    n1=n2
+    n2=next_term
+    count+=1
